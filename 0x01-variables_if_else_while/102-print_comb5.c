@@ -2,7 +2,8 @@
 /**
  * main - Entry point
  * Description: This ccode displays all the possible
- * combinations of three digits without repetition
+ * combinations of two two-digit numbers without repetition
+ * in order
  * keeping just the smallest combinations with
  * just 8 uses of only the putchar() output function
  * Return: Always 0 (Success)
@@ -14,41 +15,28 @@ int main(void)
 {
 	int k;
 	int t;
-	int g;
-	int h;
 
-	for (k = 0; k < 10; k++)
+	for (k = 0; k < 100; k++)
 	{
-		for (t = 0; t < 10; t++)
+		for (t = 1; t < 100; t++)
 		{
+			if (k >= t)
+		{
+			continue;
+		}
 
-		for (g = 0; g < 10; g++)
-		{
-		if (t > g || k > g)
-		{
-			continue;
-		}
-		for (h = 0; h < 10; h++)
-		{
-		if (g >= h && t > g && t >= h && t <= k)
-		{
-			continue;
-		}
-		putchar(k + '0');
-		putchar(t + '0');
+		putchar(k / 10 + '0');
+		putchar(k % 10 + '0');
 		putchar(' ');
-		putchar(g + '0');
-		putchar(h + '0');
+		putchar(t / 10 + '0');
+		putchar(t % 10 + '0');
+		if (k != 98)
+		{
 		putchar (',');
 		putchar(' ');
-
 		}
-		}
-
 		}
 	}
-
-
-	putchar('\n');
-	return (0);
+		putchar('\n');
+		return (0);
 }
