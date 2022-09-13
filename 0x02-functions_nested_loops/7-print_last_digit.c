@@ -13,9 +13,9 @@ int print_last_digit(int n)
 	{
 	k = n % 10;
 	}
-	else if (n = INT_MIN)
+	else if (n < -2000000)
 	{
-	k = 8;
+	k = (n + 1000000) % 10
 	}
 	else
 	{
