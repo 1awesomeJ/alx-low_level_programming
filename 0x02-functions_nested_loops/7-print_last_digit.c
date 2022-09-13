@@ -13,13 +13,10 @@ int print_last_digit(int n)
 	{
 	k = n % 10;
 	}
-	else if (n < -2000000)
-	{
-	k = (n + 1000000) % 10;
-	}
 	else
 	{
-	k = (n * -1) % 10;
+	n = -n;
+	k = n % 10;
 	}
 
 	_putchar(k + '0');
