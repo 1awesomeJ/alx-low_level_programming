@@ -15,7 +15,7 @@ int print_last_digit(int n)
 	}
 	else if (n < -2000000)
 	{
-	k = (n + 1000000) % 10
+	k = (n + 1000000) % 10;
 	}
 	else
 	{
