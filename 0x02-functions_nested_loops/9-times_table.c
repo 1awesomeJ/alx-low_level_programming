@@ -4,8 +4,8 @@
  */
 void times_table(void)
 {
-	int k, n, count = 1;
-	int count = 1;
+	int k, n;
+        int count = 1;
 
 	while (count <= 10)
 	{
