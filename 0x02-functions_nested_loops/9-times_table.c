@@ -28,8 +28,9 @@ void times_table(void)
 						_putchar(' ');
 					_putchar(k + '0');
 					if (k != 9 * n)
+					{
 						_putchar(',');
-					_putchar(' ');
+						_putchar(' '); }
 					}
 					else
 					{
@@ -41,7 +42,6 @@ void times_table(void)
 						_putchar(' ');
 						}
 					}
-				if (n != 9)
 				_putchar('\n');
 				}
 }
