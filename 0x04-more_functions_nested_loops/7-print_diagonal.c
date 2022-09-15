@@ -21,7 +21,7 @@ void print_diagonal(int n)
 		t = 1;
 		while (t <= k)
 		{
-			if (t != 1)
+		if (t != 1)
 			{
 		_putchar(' ');
 			}
