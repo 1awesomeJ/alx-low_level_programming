@@ -14,7 +14,7 @@ char *_strcpy(char *dest, char *src)
 	{
 		k++;
 	}
-	if (k > 0)
+	if (k >= 0)
 	{
 	for (n = 0; n <= k + 1; n++)
 	{
