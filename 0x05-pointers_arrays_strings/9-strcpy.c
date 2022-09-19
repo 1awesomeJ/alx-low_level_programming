@@ -7,14 +7,15 @@
 
 char *_strcpy(char *dest, char *src)
 {
-	static int k = 1;
+	static int k;
 	static int i;
 
+	k = 0;
 	while (src[k] != '\0')
 	{
 		k++;
 	}
-	if (k > 1)
+	if (k > 0)
 	{
 	for (i = 0; i <= k; i++)
 	{
