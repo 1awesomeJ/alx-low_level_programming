@@ -16,6 +16,10 @@ void puts_half(char *str)
 	{
 		k++;
 	}
+	if k % 2 = 1;
+	{
+		k= k+1;
+	}
 
 	for (n = k / 2; n < k; n++)
 	{
