@@ -6,15 +6,20 @@
  */
 
 char *_strcpy(char *dest, char *src)
-{	static int k = 0;
+{
+	static int k = 1;
 	static int i;
+
 	while (src[k] != '\0')
-	{ 
+	{
 		k++;
 	}
-	for (i = 0; i < k; i++)
+	if (k > 1)
+	{
+	for (i = 0; i <= k; i++)
 	{
 		dest[i] = src[i];
+	}
 	}
 	return (dest);
 }
