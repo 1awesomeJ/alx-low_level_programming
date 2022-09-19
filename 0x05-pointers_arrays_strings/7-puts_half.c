@@ -16,7 +16,7 @@ void puts_half(char *str)
 	{
 		k++;
 	}
-	if k % 2 = 1;
+	if (k % 2 == 1)
 	{
 		k= k+1;
 	}
