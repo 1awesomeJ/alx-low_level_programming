@@ -1,6 +1,7 @@
 /**
  * _strcpy- copies one string into another.
- * @s: the string array whose length is to be determined
+ * @src: the string to be copied
+ * @dest: the string that has been copied
  * Return: Always 0.
  */
 
@@ -13,10 +14,13 @@ char *_strcpy(char *dest, char *src)
 	{
 		k++;
 	}
-	for (n = 0; n <= k+1; n++)
+	if (k > 0)
+	{
+	for (n = 0; n <= k + 1; n++)
 	{
 		dest[n] = src[n];
 	}
+	}
 	return (dest);
-	
+
 }
