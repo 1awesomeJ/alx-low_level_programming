@@ -6,12 +6,12 @@
 
 int _atoi(char *s)
 {
-	int k;
+	int k = 0;
 	int i;
 
-	for (i = 0; i < 4; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		k = s[i];
+		k = k * 10 + s[i] - '0';
 	}
 	return (k);
 }
