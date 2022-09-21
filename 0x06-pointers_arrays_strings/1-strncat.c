@@ -28,11 +28,13 @@ char *_strncat(char *dest, char *src, int n)
 
 
 	i = 0;
-	while (i < n && i < (t + 1))
+	while (i < n)
 	{
 		dest[k] = src[i];
 		i++;
 		k++;
+		if (src[i] == '\0')
+			break;
 	}
 
 	return (dest);
