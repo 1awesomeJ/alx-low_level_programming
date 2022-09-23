@@ -11,17 +11,20 @@
 
 void print_number(int n)
 {
-
-if (n < 0)
-{
+unsigned int k;
+	if (n < 0)
+	{
 	_putchar('-');
-	n = -n;
-}
-
-if (n >= 10)
+	 k = -n;
+	}
+	else
+	{
+		k = n;
+	}
+if (k >= 10)
 {
-print_number(n / 10);
+print_number(k / 10);
 }
-_putchar(n % 10 + '0');
+_putchar(k % 10 + '0');
 }
 
