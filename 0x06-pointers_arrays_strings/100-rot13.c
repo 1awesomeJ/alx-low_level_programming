@@ -10,15 +10,16 @@ char *rot13(char *s)
 	int i = 0;
 	int c;
 	char k[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char sw[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char w[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	while (s[i] != '\0')
 	{
-		for (c = 0; c < 52; c++)
+		for (c = 0; c < 53; c++)
 		{
 			if (s[i] == k[c])
 			{
-			s[i] = sw[c];
+			s[i] = w[c];
+
 			}
 		}
 		i++;
