@@ -20,6 +20,12 @@ char *_strpbrk(char *s, char *accept)
 		if (s[i] == accept[j])
 		break;
 	}
-
+	if (s[i] == accept[j])
+	{
 	return (s + i);
+	}
+	else
+	{
+	return ('\0');
+	}
 }
