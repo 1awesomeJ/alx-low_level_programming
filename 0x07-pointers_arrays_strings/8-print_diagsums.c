@@ -6,7 +6,7 @@
  * @size: the size of the square matrix
  * @a: the square matrix.
  */
-void print_diagsums(int (*a)[10], int size)
+void print_diagsums(int *a[5], int size)
 {
 	int i, j, sum;
 	sum = 0;
@@ -16,7 +16,7 @@ void print_diagsums(int (*a)[10], int size)
 		{
 		if (i == j)
 		{
-		sum += (a[i])[j];
+		sum += (a)[i][j];
 		}
 		}
 	}
