@@ -16,7 +16,7 @@ int main(int argc, __attribute__((unused))char **argv)
 		printf("0\n");
 	for (i = 1; i < argc; i++)
 	{
-		if (atoi(argv[i]) == 0 && argc > 1)
+		if (atoi(argv[i]) == 0 && *argv[i] != '0')
 		{
 		printf("Error\n");
 		return (1);
