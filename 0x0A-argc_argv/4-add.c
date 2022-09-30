@@ -9,17 +9,22 @@
  */
 int main(int argc, __attribute__((unused))char **argv)
 {
-	int i, sum;
+	int i, j, sum;
 
 	sum = 0;
 	if (argc < 2)
 		printf("0\n");
 	for (i = 1; i < argc; i++)
 	{
-		if (atoi(argv[i]) == 0 && *argv[i] != '0')
+		j = 0;
+		while (*(argv[i] +j) != '\0')
 		{
-		printf("Error\n");
-		return (1);
+			if (*(argv[i] + j) > '9' || *(argv[i]+j) < '0')
+			{
+			printf("Error\n");
+			return (1);
+			}
+		j++;
 		}
 		if (atoi(argv[i]) < 1)
 			continue;
