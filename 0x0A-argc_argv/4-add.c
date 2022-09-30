@@ -21,6 +21,8 @@ int main(int argc, __attribute__((unused))char **argv)
 		printf("Error\n");
 		return (1);
 		}
+		if (atoi(argv[i]) < 1)
+			continue;
 	sum += atoi(argv[i]);
 	}
 	if (argc > 1)
