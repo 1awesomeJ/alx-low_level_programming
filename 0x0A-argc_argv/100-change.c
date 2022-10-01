@@ -17,6 +17,8 @@ int main(int argc, __attribute__((unused))char **argv)
 	return (1);
 	}
 	k = atoi(argv[1]);
+	if (k < 0)
+		printf("0\n");
 
 	a = k / 25;
 	b = k % 25;
@@ -27,7 +29,7 @@ int main(int argc, __attribute__((unused))char **argv)
 	g = f / 2;
 	h = f % 2;
 	min = a + c + e + g + h;
-
+	if (k > 0)
 	printf("%d\n", min);
 	return (0);
 }
