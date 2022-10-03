@@ -25,7 +25,7 @@ char *set;
 	if (str != NULL)
 	k = _strlen(str);
 
-	set = (char *) malloc(k *sizeof(char) + 1);
+	set = (char *) malloc(k * sizeof(char) + 1);
 	if (set == NULL)
 		return (NULL);
 	for (i = 0; i < k; i++)
