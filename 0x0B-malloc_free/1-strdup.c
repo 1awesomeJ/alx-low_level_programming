@@ -19,9 +19,11 @@ char *_strdup(char *str)
 {
 int i, k;
 char *set;
-k = _strlen(str);
 	if (str == NULL)
 	return (NULL);
+
+	if (str != NULL)
+	k = _strlen(str);
 
 	set = (char *) malloc(k *sizeof(char) + 1);
 	if (set == NULL)
