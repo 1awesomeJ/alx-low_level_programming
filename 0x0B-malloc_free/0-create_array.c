@@ -19,8 +19,9 @@ char *create_array(unsigned int size, char c)
 
 	if (size == 0)
 		return (NULL);
-	set = malloc(size * sizeof(char));
-
+	set = (char *) malloc(size * sizeof(char));
+	if (set == NULL)
+		return (NULL);
 	for (i = 0; i < size; i++)
 	{
 		set[i] = c;
