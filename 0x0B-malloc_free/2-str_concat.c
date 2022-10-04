@@ -29,13 +29,17 @@ char *set;
 		return (NULL);
 	for (i = 0; i < k; i++)
 	{
+		if (s1 != NULL)
 		set[i] = s1[i];
 	}
 	l = 0;
 	for (i = k; i <= (k + j); i++)
 	{
-	set[i] = s2[l];
-		l++;
+		if (s2 == NULL)
+		set[i] = '\0';
+		if (s2 != NULL)
+		set[i] = s2[l];
+	l++;
 	}
 	return (set);
 
@@ -51,6 +55,8 @@ int _strlen(char *s)
 	int k = 0;
 	int n;
 
+	if (s == NULL)
+		return (0);
 	for (n = 0; s[n] != '\0'; n++)
 		k++;
 	return (k);
