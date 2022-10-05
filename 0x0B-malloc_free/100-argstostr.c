@@ -31,7 +31,7 @@ char *argstostr(int ac, char **av)
 	}
 	len += ac;
 
-	mat = (char *)malloc(sizeof(char) * (len + 7));
+	mat = (char *)malloc(sizeof(char) * (len + 1));
 
 	if (mat == NULL)
 	{
