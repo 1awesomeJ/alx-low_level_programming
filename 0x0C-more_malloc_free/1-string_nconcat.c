@@ -36,20 +36,28 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	}
 /*now we copy s1 first into the allocted space, s1 will occupy index 0 to a-1*/
-
 	for (i = 0; i < a; i++)
 		b[i] = s1[i];
-
 /*Finally we copy the first n bytes of s2 to the rem space, i=0 4 s2 from 0*/
-
+	if (n < c)
+{
 	i = 0;
 	for (j = a; j < (a + n); j++)
 	{
 		b[j] = s2[i];
 		i++;
 	}
-
-	return (b);
+}
+	if (n >= c)
+{
+	i = 0;
+	for (j = a; j < (a + c); j++)
+	{
+		b[j] = s2[i];
+		i++;
+	}
+}
+return (b);
 }
 
 /**
