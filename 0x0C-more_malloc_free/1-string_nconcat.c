@@ -1,5 +1,7 @@
 #include <stdlib.h>
-#include <string.h>
+
+int _strlen(char s[]);
+
 /**
  * string_nconcat - adds the first n bytes of a second string,to a first string
  *@s1: the first string
@@ -7,8 +9,6 @@
  *@n: the number of bytes to be copied from s2
  * Return: a pointer to the address of the concantenated string
  */
-
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int a, c, i, j;
@@ -20,9 +20,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		c = 0;
 	if (s1 != NULL)
-	a = strlen(s1);
+	a = _strlen(s1);
 	if (s2 != NULL)
-	c = strlen(s2);
+	c = _strlen(s2);
 	if (n < c)
 	{
 	b = malloc(a + n + 1);
@@ -50,4 +50,19 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 
 	return (b);
+}
+
+/**
+ *_strlen - returns the length of a string
+ *@s: the string to be checked
+ * Return: Always 0.
+ */
+int _strlen(char s[])
+{
+	int k = 0;
+	int n;
+
+	for (n = 0; s[n] != '\0'; n++)
+		k++;
+	return (k);
 }
