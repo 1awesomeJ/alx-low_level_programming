@@ -47,6 +47,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		b[j] = s2[i];
 		i++;
 	}
+	b[j] = '\0';
 }
 	if (n >= c)
 {
@@ -56,6 +57,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		b[j] = s2[i];
 		i++;
 	}
+	b[j] = '\0';
 }
 return (b);
 }
