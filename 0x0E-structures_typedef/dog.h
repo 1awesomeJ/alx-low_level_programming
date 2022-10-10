@@ -8,13 +8,17 @@
  *@owner: the dog's owner
  */
 
-
-
 struct dog
 {
 char *name;
 float age;
 char *owner;
 };
+
+#endif
+
+#ifndef INIT
+#define INIT
+void init_dog(struct dog *d, char *name, float age, char *owner);
 
 #endif
