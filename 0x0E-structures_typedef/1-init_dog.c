@@ -1,4 +1,5 @@
 #include "dog.h"
+#include <stdlib.h>
 /**
  * init_dog - sets the values of data in the dog struct using pointers
  *@d: the address of the struct
@@ -12,8 +13,11 @@
 void init_dog(struct dog *d, char *name, float age, char *owner)
 
 {
+	if (d != NULL)
+	{
 	(*d).name = name;
 	(*d).age = age;
 	(*d).owner = owner;
+	}
 
 }
