@@ -1,20 +1,20 @@
 #ifndef DOG_H
 #define DOG_H
 
+typedef struct dog dog_t;
+
 /**
- *struct dog - struct to define the details of a dog
+ * struct dog - a dog's details
  *@name: the dog's name
  *@age: the dog's age
  *@owner: the dog's owner
  */
-
 struct dog
 {
 char *name;
 float age;
 char *owner;
 };
-
 #endif
 
 #ifndef INIT
