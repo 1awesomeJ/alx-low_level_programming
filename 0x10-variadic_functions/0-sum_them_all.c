@@ -11,7 +11,6 @@ int sum_them_all(const unsigned int n, ...)
 unsigned int i, sum;
 va_list pars;
 va_start(pars, n);
-va_end(pars);
 
 	if (n == 0)
 	return (0);
@@ -20,5 +19,6 @@ sum = 0;
 for (i = 0; i < n; i++)
 	sum += va_arg(pars, unsigned int);
 
+va_end(pars);
 return (sum);
 }
