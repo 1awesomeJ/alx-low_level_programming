@@ -19,7 +19,7 @@ for (i = 0; i < n; i++)
 {
 	x = va_arg(p, char*);
 	if (x == NULL)
-	printf("nil");
+	printf("(nil)");
 	if (x != NULL)
 	printf("%s", x);
 	if (i != (n - 1) && separator != NULL)
