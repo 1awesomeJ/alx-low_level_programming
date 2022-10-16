@@ -14,7 +14,7 @@ int i = 0;
 
 op_t k[] = { {"+", op_add},
 	{"-", op_sub},
-	{".", op_mul},
+	{"*", op_mul},
 	{"/", op_div},
 	{"%", op_mod},
 	{NULL, NULL}};
