@@ -1,0 +1,1 @@
+We started working with linked lists(singly-linked) in C. Having used arrays a lot, linked lists will be a new concept to learn. The easy insertion and deletion are among the advantages linked lists have over arrays.
