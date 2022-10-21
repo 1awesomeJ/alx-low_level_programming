@@ -21,13 +21,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	free(p);
 	return (NULL);
 	}
-/*(*p).name = name;
-//(*p).owner = owner;*/
-(*p).name = malloc(sizeof name);
-(*p).owner = malloc(sizeof owner);
 (*p).age = age;
-(*p).name = strcpy((*p).name, name);
-(*p).owner = strcpy((*p).owner, owner);
+(*p).name = strdup(name);
+(*p).owner = strdup(owner);
 return (p);
 
 }
