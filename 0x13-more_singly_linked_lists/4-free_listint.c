@@ -14,10 +14,10 @@ void free_listint(listint_t *head)
 listint_t *k;
 	while (head)
 	{
-k = head;
-head = (*head).next;
-free(k);
-k = NULL;
+		k = head;
+		head = (*head).next;
+		free(k);
+		k = NULL;
 	}
 
 }
