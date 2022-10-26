@@ -2,19 +2,33 @@
 #include <stdlib.h>
 
 /**
- * get_nodeint_at_index - returns the nth node of a linked list
+ * insert_nodeint_at_index - inserts a node to the nth index of a linked list
  *@head: address of the first node of the list
- *@index: the required node to be returned.
- * Return: Always 0.
+ *@idx: the at which the node is to be inserted
+ *@n: data of the node to be inserted
+ * Return: address of the inserted node.
  */
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-unsigned int i;
-listint_t *new, *k;
+unsigned int i, l;
+listint_t *new, *k, *m;
 
 if (*head == NULL)
 	return (NULL);
+m = *head;
+while (m)
+{
+l++;
+m = (*m).next;
+}
+
+if (idx > l)
+return (NULL);
+
+if (idx == 0)
+return (NULL);
+
 k = *head;
 for (i = 0; i < (idx - 1); i++)
 	k = (*k).next;
