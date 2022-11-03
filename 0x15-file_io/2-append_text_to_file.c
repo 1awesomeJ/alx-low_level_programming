@@ -1,5 +1,15 @@
 #include "main.h"
 
+/**
+ * append_text_to_file - appends a text to a file opened
+ *@filename: the name of the file
+ *@text_content: the text to be appended to the file
+ * Return: Always 0.
+ */
+
+
+
+
 int append_text_to_file(const char *filename, char *text_content)
 
 {
