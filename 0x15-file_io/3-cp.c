@@ -31,13 +31,13 @@ int main(int ac, char **av)
 	k1 = close(fd1);
 	if (k1 < 0)
 	{
-	dprintf(STDERR_FILENO, "Can't close fd %d", fd1);
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd1);
 	exit(100);
 	}
 	k2 = close(fd2);
 	if (k2 < 0)
 	{
-	dprintf(STDERR_FILENO, "Can't close fd %d", fd1);
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd1);
 	exit(100);
 	}
 	return (0);
