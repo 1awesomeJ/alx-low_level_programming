@@ -1,33 +1,50 @@
 #include <stdio.h>
+#include <limits.h>
 /**
- * main - check the code
+ * main -prints the first 100 fibonacci numbers.
  *
  * Return: Always 0.
  */
-
 int main(void)
 {
-	int count = 0;
-	int a = 0;
-	int b = 1;
-	int c = 0;
-	int sum = 0;
+	int count;
+	unsigned long int a, b, c, d, e, f;
+	int z = 0;
 
-	while (c <= 4000000)
-	{
-		c = a + b;
+	a = 1, b = 2;
+	printf("%lu, %lu", a, b);
+	for (count = 3; count <= 100; count++)
+	{	c = a + b;
+		if (c < b)
+			break;
 		a = b;
 		b = c;
-		if (c % 2 == 0)
-		{
-		sum = sum + c;
-		}
-		count++;
+	printf(", %lu", c);
 	}
-	if (c % 2 == 0)
-	{
-		sum = sum - c;
+	d = a % 100;
+	e = b % 100;
+	a /= 100;
+	b /= 100;
+	for (; count <= 100; count++)
+	{	z = 0;
+		f = d + e;
+		if (f / 100)
+		{	c = a + b + 1;
+			f %= 100;
 		}
-	printf("%d\n", sum);
+		else
+		c = a + b;
+	if (f < 10)
+		z = 1;
+	a = b;
+	b = c;
+	d = e;
+	e = f;
+	if (z)
+	printf(", %lu0%lu", c, f);
+	else
+	printf(", %lu%lu", c, f);
+	}
+	printf("\n");
 	return (0);
 }
