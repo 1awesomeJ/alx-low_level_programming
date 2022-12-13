@@ -13,7 +13,7 @@ int main(void)
 
 	a = 1, b = 2;
 	printf("%lu, %lu", a, b);
-	for (count = 3; count <= 100; count++)
+	for (count = 3; count <= 98; count++)
 	{	c = a + b;
 		if (c < b)
 			break;
@@ -25,7 +25,7 @@ int main(void)
 	e = b % 100;
 	a /= 100;
 	b /= 100;
-	for (; count <= 100; count++)
+	for (; count <= 98; count++)
 	{	z = 0;
 		f = d + e;
 		if (f / 100)
